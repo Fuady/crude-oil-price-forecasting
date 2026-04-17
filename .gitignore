@@ -1,0 +1,49 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+env/
+.env
+.eggs/
+*.so
+
+# Data (fetched fresh via download_data.py)
+data/raw/
+data/processed/
+data/features/
+
+# Models
+models/*.pkl
+models/*.joblib
+models/*.pt
+models/*.pth
+
+# MLflow
+mlruns/
+mlartifacts/
+
+# Monitoring reports
+monitoring/reports/*.html
+monitoring/reports/*.json
+
+# Notebooks checkpoints
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
