@@ -267,22 +267,6 @@ All data fetching falls back gracefully to synthetic/cached data when APIs are u
 
 ---
 
-## Skills Demonstrated
-
-| Category | Skills |
-|---|---|
-| Data Engineering | Multi-source ETL, time-series alignment, forward-fill, resampling |
-| Financial Feature Eng. | RSI, MACD, Bollinger Bands, ATR, OBV, momentum, yield curve |
-| NLP | FinBERT sentiment analysis, rolling sentiment aggregation |
-| ML / Deep Learning | XGBoost, LSTM, ensemble, walk-forward cross-validation |
-| MLOps | MLflow tracking/registry, Optuna tuning, Docker, CI-ready |
-| Backtesting | Walk-forward simulation, Sharpe ratio, max drawdown |
-| Production | FastAPI, Pydantic, async inference, confidence intervals |
-| Monitoring | Evidently AI, feature drift, prediction drift |
-
----
-
-
 ## Disclaimer
 
 This project is for **educational and portfolio purposes only**. Forecasts and trading signals are not financial advice and should not be used for actual trading decisions.
