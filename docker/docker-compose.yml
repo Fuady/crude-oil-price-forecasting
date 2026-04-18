@@ -1,0 +1,49 @@
+version: "3.9"
+
+services:
+
+  mlflow:
+    image: python:3.10-slim
+    working_dir: /mlflow
+    command: >
+      bash -c "pip install mlflow -q &&
+               mlflow server
+               --backend-store-uri sqlite:///mlflow.db
+               --default-artifact-root /mlflow/artifacts
+               --host 0.0.0.0 --port 5000"
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow_data:/mlflow
+
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../models:/app/models
+      - ../data/features:/app/data/features
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - PYTHONPATH=/app
+    depends_on:
+      - mlflow
+    restart: unless-stopped
+
+  dashboard:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - API_BASE_URL=http://api:8000
+      - PYTHONPATH=/app
+    depends_on:
+      - api
+    restart: unless-stopped
+
+volumes:
+  mlflow_data:
