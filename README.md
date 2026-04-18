@@ -282,17 +282,6 @@ All data fetching falls back gracefully to synthetic/cached data when APIs are u
 
 ---
 
-## Industry Context
-
-Directly relevant to these Middle East O&G roles:
-
-- **ADNOC Trading** — crude oil desk analytics and price risk management
-- **Saudi Aramco Trading Company (SATC)** — systematic trading and market intelligence
-- **QatarEnergy** — LNG pricing and commodity analytics
-- **ENOC / EPPCO** — downstream pricing and margin optimization
-- **Petrochemicals trading desks** — feedstock cost forecasting
-
----
 
 ## Disclaimer
 
